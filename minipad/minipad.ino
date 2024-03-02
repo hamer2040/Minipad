@@ -291,51 +291,48 @@ void Layout2(char button){
     case '0':
       Keyboard.press(KEY_LEFT_CTRL);  
       Keyboard.print('c');
-      lcdMsg("CTRL+C"); 
+      lcdMsg("CTRL+C"); //Скопировать
       break;
     case '1':
       Keyboard.press(KEY_LEFT_CTRL);  
       Keyboard.print('v');
-      lcdMsg("CTRL+V");  
+      lcdMsg("CTRL+V");  //Вставить
       break;
     case '2':
       Keyboard.press(KEY_LEFT_CTRL);  
       Keyboard.print('x');
-      lcdMsg("CTRL+X");  
+      lcdMsg("CTRL+X"); //Вырезать
       break;
     case '3':
-      Keyboard.press(KEY_LEFT_CTRL);  
-      Keyboard.print('z');
-      lcdMsg("CTRL+Z");  
-      break;
+      Keyboard.press(KEY_ESC);
+      lcdMsg("ESC"); 
+      break; //Ескейп
     case '4':
       Keyboard.press(KEY_PRINT);
-      lcdMsg("PRINT SCR"); 
+      lcdMsg("PRINT SCR"); //Вызов скриншотилки
       break;
     case '5':
       Keyboard.press(KEY_LEFT_GUI);
       Keyboard.print('v');
-      lcdMsg("Win+V"); 
+      lcdMsg("Win+V"); //Буфер
       break;
     case '6':
       Keyboard.press(KEY_LEFT_CTRL);
       Keyboard.press(KEY_LEFT_ALT);
       Keyboard.print('v');
-      lcdMsg("CTRL+ALT+V"); 
+      lcdMsg("CTRL+ALT+V"); //Вставить текст без форматирования
       break;
     case '7':
-      // Keyboard.press(KEY_LEFT_GUI);
       Keyboard.press(KEY_LEFT_ALT);
       Keyboard.press(KEY_LEFT_SHIFT);
       Keyboard.print('s');
-      lcdMsg("A+S+S"); 
+      lcdMsg("A+S+S"); //Вызов контекстной строки
       break;
     case '8':
       Keyboard.press(KEY_LEFT_GUI);
-      Keyboard.press(KEY_LEFT_CTRL);
-      Keyboard.press(KEY_LEFT_SHIFT);
-      Keyboard.print('r');
-      lcdMsg("WIN+C+S+R"); 
+      Keyboard.print('KEY_LEFT_SHIFT');
+      Keyboard.print('T');
+      lcdMsg("Win+S+T"); //Копирование текста
       break;
     case '9': // згорнути/розгорнути вікно
       if (dopvar){
