@@ -324,11 +324,11 @@ void Layout2(char button){
       lcdMsg("CTRL+ALT+V"); 
       break;
     case '7':
-      Keyboard.press(KEY_LEFT_GUI);
-      Keyboard.press(KEY_LEFT_CTRL);
+      // Keyboard.press(KEY_LEFT_GUI);
+      Keyboard.press(KEY_LEFT_ALT);
       Keyboard.press(KEY_LEFT_SHIFT);
-      Keyboard.print('t');
-      lcdMsg("WIN+C+S+T"); 
+      Keyboard.print('s');
+      lcdMsg("A+S+S"); 
       break;
     case '8':
       Keyboard.press(KEY_LEFT_GUI);
