@@ -330,7 +330,7 @@ void Layout2(char button){
       break;
     case '8':
       Keyboard.press(KEY_LEFT_GUI);
-      Keyboard.print('KEY_LEFT_SHIFT');
+      Keyboard.press(KEY_LEFT_SHIFT);
       Keyboard.print('T');
       lcdMsg("Win+S+T"); //Копирование текста
       break;
