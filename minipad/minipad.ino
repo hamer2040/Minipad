@@ -356,18 +356,25 @@ void Layout2(char button){
 // Третій рівень клавіатури
 void Layout3(char button){
   switch(button){
-    case '0':
-      Keyboard.print('0');
+     case '0':
+      Keyboard.press(KEY_LEFT_CTRL);  
+      Keyboard.print('c');
+      lcdMsg("CTRL+C"); //Скопировать
       break;
     case '1':
-      Keyboard.print('1');
+      Keyboard.press(KEY_LEFT_CTRL);  
+      Keyboard.print('v');
+      lcdMsg("CTRL+V");  //Вставить
       break;
     case '2':
-      Keyboard.print('2');
+      Keyboard.press(KEY_LEFT_CTRL);  
+      Keyboard.print('d');
+      lcdMsg("CTRL+D"); //Дублировать
       break;
     case '3':
-      Keyboard.print('3');
-      break;
+      Keyboard.press(KEY_LEFT_CTRL);  
+      Keyboard.print('y');
+      lcdMsg("CTRL+Y"); //Удалить строчку
     case '4':
       Keyboard.print('4');
       break;
