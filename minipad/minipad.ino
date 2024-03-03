@@ -8,7 +8,7 @@
 #define LED_COUNT 17          // число светодиодов в кольце/ленте
 #define LED_DT 10             // пин, куда подключен DIN ленты
 
-int ledMode = 2;
+int ledMode = 4;
 int prevledMode, maxledMode = 10;
 // цвета мячиков для режима
 byte ballColors[3][3] = {
