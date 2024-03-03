@@ -140,6 +140,22 @@ void setup() {
 
 }
 
+void media_next(){
+  lcdMsg("NEXT");
+  switch(currentState){
+  case 0:
+      Consumer.write(MEDIA_NEXT);
+      //lcdMsg("NEXT");
+    break;
+  case 1:
+      //Consumer.write(MEDIA_NEXT);
+      Keyboard.press(KEY_LEFT_CTRL);
+      Keyboard.press(HID_KEYBOARD_RIGHTARROW);
+      //lcdMsg("NEXT");
+      delay(10); Keyboard.releaseAll();
+  break;
+  }
+}
 
 void loop() {
   encoder();
@@ -164,6 +180,7 @@ void loop() {
     break;
     //Обробка мультимедійної клавіші "Наступна"
     case '>':
+      // media_next();
       Consumer.write(MEDIA_NEXT);
       lcdMsg("NEXT");
     break;
@@ -274,7 +291,10 @@ void Layout1(char button){
       Keyboard.print('6');
       break;
     case '7':
-      Keyboard.print('7');
+      Keyboard.press(KEY_LEFT_ALT);
+      Keyboard.press(KEY_LEFT_SHIFT);
+      Keyboard.print('s');
+      lcdMsg("PTRun"); //Вызов контекстной строки
       break;
     case '8':
       Keyboard.print('8');
