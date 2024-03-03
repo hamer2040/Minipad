@@ -270,91 +270,6 @@ void Layout1(char button){
    if ((button>='0')&&(button<='9')) lcdMsg(String(button)); 
   switch(button){
     case '0':
-      Keyboard.print('0');
-      break;
-    case '1':
-      Keyboard.print('1');
-      break;
-    case '2':
-      Keyboard.print('2');
-      break;
-    case '3':
-      Keyboard.print('3');
-      break;
-    case '4':
-      Keyboard.print('4');
-      break;
-    case '5':
-      Keyboard.print('5');
-      break;
-    case '6':
-      Keyboard.print('6');
-      break;
-    case '7':
-      Keyboard.press(KEY_LEFT_ALT);
-      Keyboard.press(KEY_LEFT_SHIFT);
-      Keyboard.print('s');
-      lcdMsg("PTRun"); //Вызов контекстной строки
-      break;
-    case '8':
-      Keyboard.print('8');
-      break;
-    case '9':
-      Keyboard.print('9');
-      break;
-  };
-}
-
-// Другий рівень клавіатури
-void Layout2(char button){
-  switch(button){
-    case '0':
-      Keyboard.press(KEY_LEFT_CTRL);  
-      Keyboard.print('c');
-      lcdMsg("CTRL+C"); //Скопировать
-      break;
-    case '1':
-      Keyboard.press(KEY_LEFT_CTRL);  
-      Keyboard.print('v');
-      lcdMsg("CTRL+V");  //Вставить
-      break;
-    case '2':
-      Keyboard.press(KEY_LEFT_CTRL);  
-      Keyboard.print('x');
-      lcdMsg("CTRL+X"); //Вырезать
-      break;
-    case '3':
-      Keyboard.press(KEY_ESC);
-      lcdMsg("ESC"); 
-      break; //Ескейп
-    case '4':
-      Keyboard.press(KEY_PRINT);
-      lcdMsg("PRINT SCR"); //Вызов скриншотилки
-      break;
-    case '5':
-      Keyboard.press(KEY_LEFT_GUI);
-      Keyboard.print('v');
-      lcdMsg("Win+V"); //Буфер
-      break;
-    case '6':
-      Keyboard.press(KEY_LEFT_CTRL);
-      Keyboard.press(KEY_LEFT_ALT);
-      Keyboard.print('v');
-      lcdMsg("CTRL+ALT+V"); //Вставить текст без форматирования
-      break;
-    case '7':
-      Keyboard.press(KEY_LEFT_ALT);
-      Keyboard.press(KEY_LEFT_SHIFT);
-      Keyboard.print('s');
-      lcdMsg("A+S+S"); //Вызов контекстной строки
-      break;
-    case '8':
-      Keyboard.press(KEY_LEFT_GUI);
-      Keyboard.press(KEY_LEFT_SHIFT);
-      Keyboard.print('T');
-      lcdMsg("Win+S+T"); //Копирование текста
-      break;
-    case '9': // згорнути/розгорнути вікно
       if (dopvar){
        Keyboard.press(KEY_LEFT_GUI);
        Keyboard.print('m');
@@ -366,17 +281,60 @@ void Layout2(char button){
        Keyboard.press(KEY_LEFT_SHIFT);
        Keyboard.print('m');
        lcdMsg("DESKTOP");  
-       dopvar=1;
+       dopvar=1; //Свернуть/развернуть окна
       }
-
+      break;
+    case '1':
+      Keyboard.print('1');
+      break;
+    case '2':
+      Keyboard.print('2');
+      break;
+    case '3':
+      Keyboard.print('3');
+      break;
+    case '4':
+      Keyboard.press(KEY_LEFT_GUI);
+      Keyboard.press(KEY_LEFT_SHIFT);
+      Keyboard.print('T');
+      lcdMsg("TExtractor"); //Рапознать текст
+      break;
+    case '5':
+      Keyboard.press(KEY_LEFT_GUI);
+      Keyboard.press(KEY_LEFT_CTRL);
+      Keyboard.press(KEY_LEFT_ALT);
+      Keyboard.print('v');
+      lcdMsg("Paste"); //Вставить как обычный текст
+      break;
+    case '6':
+      Keyboard.press(KEY_LEFT_GUI);
+      Keyboard.print('v');
+      lcdMsg("Win+V"); //Буфер
+      break;
+    case '7':
+      Keyboard.press(KEY_LEFT_ALT);
+      Keyboard.press(KEY_LEFT_SHIFT);
+      Keyboard.print('s');
+      lcdMsg("PTRun"); //PowerToys
+      break;
+    case '8':
+      Keyboard.press(KEY_LEFT_ALT);
+      Keyboard.press(KEY_F11);
+      lcdMsg("MultiTio"); //Много клиентов ТИО
+      break;
+    case '9':
+      Keyboard.press(KEY_LEFT_CTRL);
+      Keyboard.press(KEY_LEFT_ALT);
+      Keyboard.print('v');
+      lcdMsg("Qtranslate"); //Распознать текст
       break;
   };
 }
 
-// Третій рівень клавіатури
-void Layout3(char button){
+// Другий рівень клавіатури
+void Layout2(char button){
   switch(button){
-     case '0':
+    case '0':
       Keyboard.press(KEY_LEFT_CTRL);  
       Keyboard.print('c');
       lcdMsg("CTRL+C"); //Скопировать
@@ -398,17 +356,17 @@ void Layout3(char button){
     case '4':
       Keyboard.press(KEY_LEFT_CTRL);
       Keyboard.print('+');
-      lcdMsg("Expand"); //Удалить строчку
+      lcdMsg("Expand"); //Развернуть блок
       break;
     case '5':
       Keyboard.press(KEY_LEFT_CTRL);
       Keyboard.print('-');
-      lcdMsg("Collapse"); //Удалить строчку
+      lcdMsg("Collapse"); //Свернуть блок
       break;
     case '6':
       Keyboard.press(KEY_LEFT_CTRL);
       Keyboard.print('/');
-      lcdMsg("Comment"); //Коментарии
+      lcdMsg("Comment"); //Закоментировать
       break;
     case '7':
       Keyboard.press(KEY_LEFT_CTRL);
@@ -425,6 +383,42 @@ void Layout3(char button){
       Keyboard.press(KEY_LEFT_ALT);
       Keyboard.press(KEY_F12);
       lcdMsg("Tio"); //Клиент ТИО
+      break;
+  };
+}
+
+// Третій рівень клавіатури
+void Layout3(char button){
+  switch(button){
+   case '0':
+      Keyboard.print('0');
+      break;
+    case '1':
+      Keyboard.print('1');
+      break;
+    case '2':
+      Keyboard.print('2');
+      break;
+    case '3':
+      Keyboard.print('3');
+      break;
+    case '4':
+      Keyboard.print('4');
+      break;
+    case '5':
+      Keyboard.print('5');
+      break;
+    case '6':
+      Keyboard.print('6');
+      break;
+    case '7':
+      Keyboard.print('7');
+      break;
+    case '8':
+      Keyboard.print('8');
+      break;
+    case '9':
+      Keyboard.print('9');
       break;
   };
 }
