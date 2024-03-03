@@ -369,29 +369,42 @@ void Layout3(char button){
     case '2':
       Keyboard.press(KEY_LEFT_CTRL);  
       Keyboard.print('d');
-      lcdMsg("CTRL+D"); //Дублировать
+      lcdMsg("Dublicate"); //Дублировать
       break;
     case '3':
       Keyboard.press(KEY_LEFT_CTRL);  
       Keyboard.print('y');
       lcdMsg("CTRL+Y"); //Удалить строчку
     case '4':
-      Keyboard.print('4');
+      Keyboard.press(KEY_LEFT_CTRL);
+      Keyboard.print('+');
+      lcdMsg("Expand"); //Удалить строчку
       break;
     case '5':
-      Keyboard.print('5');
+      Keyboard.press(KEY_LEFT_CTRL);
+      Keyboard.print('-');
+      lcdMsg("Collapse"); //Удалить строчку
       break;
     case '6':
-      Keyboard.print('6');
+      Keyboard.press(KEY_LEFT_CTRL);
+      Keyboard.print('/');
+      lcdMsg("Comment"); //Коментарии
       break;
     case '7':
-      Keyboard.print('7');
+      Keyboard.press(KEY_LEFT_CTRL);
+      Keyboard.press(KEY_LEFT_SHIFT);
+      Keyboard.print('F');
+      lcdMsg("Find"); //Поиск
       break;
     case '8':
-      Keyboard.print('8');
+      Keyboard.press(KEY_LEFT_SHIFT);
+      Keyboard.press(KEY_F10);
+      lcdMsg("Run"); //Запуск сервера
       break;
     case '9':
-      Keyboard.print('9');
+      Keyboard.press(KEY_LEFT_ALT);
+      Keyboard.press(KEY_F12);
+      lcdMsg("Tio"); //Клиент ТИО
       break;
   };
 }
