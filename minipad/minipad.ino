@@ -285,13 +285,19 @@ void Layout1(char button){
       }
       break;
     case '1':
-      Keyboard.print('1');
+      Keyboard.press(KEY_LEFT_CTRL);  
+      Keyboard.print('d');
+      lcdMsg("Dublicate"); //Дублировать
       break;
     case '2':
-      Keyboard.print('2');
+      Keyboard.press(KEY_LEFT_CTRL);  
+      Keyboard.print('y');
+      lcdMsg("CTRL+Y"); //Удалить строчку
       break;
     case '3':
-      Keyboard.print('3');
+      Keyboard.press(KEY_LEFT_CTRL);  
+      Keyboard.print('f');
+      lcdMsg("Find"); //Поиск
       break;
     case '4':
       Keyboard.press(KEY_LEFT_GUI);
