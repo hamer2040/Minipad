@@ -361,7 +361,8 @@ void Layout2(char button){
       lcdMsg("CTRL+Y"); //Удалить строчку
     case '4':
       Keyboard.press(KEY_LEFT_CTRL);
-      Keyboard.print('+');
+      Keyboard.press(KEY_EQUAL);
+      // Keyboard.print('+');
       lcdMsg("Expand"); //Развернуть блок
       break;
     case '5':
