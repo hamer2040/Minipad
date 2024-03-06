@@ -89,7 +89,7 @@ TimerMs effekt_timer(20, 1, 1);
 TimerMs msg_timer(1000, 1, 1);
 TimerMs enc_timer(1, 1, 1);
 
-const int numStates = 4; // Кількість рівнів клавіатури 
+const int numStates = 2; // Кількість рівнів клавіатури 
 int currentState = 0;    // Поточний рівень
 
 int dopvar=1;
