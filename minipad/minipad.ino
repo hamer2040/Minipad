@@ -160,7 +160,7 @@ void media_next(){
 void loop() {
   encoder();
   checkMute();
-  mouse_update();
+  // mouse_update();
   if (effekt_timer.tick())led_effect();
   if (msg_timer.tick()) if (msg) {lcdMsgMode();}
 
@@ -324,9 +324,14 @@ void Layout1(char button){
       lcdMsg("PTRun"); //PowerToys
       break;
     case '8':
+      // Keyboard.press(KEY_LEFT_ALT);
+      // Keyboard.press(KEY_F11);
+      // lcdMsg("MultiTio"); //Много клиентов ТИО
+
+      Keyboard.press(KEY_LEFT_CTRL);
       Keyboard.press(KEY_LEFT_ALT);
-      Keyboard.press(KEY_F11);
-      lcdMsg("MultiTio"); //Много клиентов ТИО
+      Keyboard.print('m');
+      lcdMsg("MonitorOff"); //Мониторы в спящий.
       break;
     case '9':
       Keyboard.press(KEY_LEFT_CTRL);
